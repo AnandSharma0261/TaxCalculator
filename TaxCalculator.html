@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tax Calculator</title>
+<link rel="stylesheet" href="TaxCalculator.css">
+</head>
+<body>
+<div class="container">
+    <h1>Tax Calculator</h1>
+    <form id="income-form">
+        <div class="form1">
+            <label for="GrossIncome" >Enter gross annual income :-</label>
+            <input type="number" id="GrossIncome" placeholder="Enter gross annual income" required>
+        </div>
+        <div class="form1">
+            <label for="ExtraIncome"  >Enter extra income :-</label>
+            <input type="number" id="ExtraIncome" placeholder="Enter extra income" required>
+        </div>
+        <div class="form1">
+            <label for="age">Age Group :-</label>
+            <select id="age" required>
+                <option value="">Select Age Group</option>
+                <option value="40">&lt;40</option>
+                <option value="60">&gt;=40 &amp; &lt;60</option>
+                <option value="60">&gt;=60</option>
+            </select>
+            <span class="error-icon" hidden>!</span>
+            <span class="error-tooltip" hidden>Please select an age group.</span>
+        </div>
+        <div class="form1">
+            <label for="Deductions" >Enter total applicable deductions :-</label>
+            <input type="number" id="Deductions" placeholder="Enter total applicable deductions" required>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Tax Calculation Result</h2>
+        <p id="taxAmount"></p>
+    </div>
+</div>
+<script src="TaxCalculator.js"></script>
+
+</body>
+</html>
